@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GBA_SNAKE" />
+		<Option makefile_is_custom="1" />
+		<Option execution_dir="." />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="vba">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+				<MakeCommands>
+					<Build command="$make -f $makefile $target" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="debugvba">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<ExtraCommands>
+					<Add before='echo &quot;if you have run the vba target before this make sure to clean first!&quot;' />
+					<Add after='echo &quot;Remember once you switch to the vba or wxvba target to clean first&quot;' />
+					<Mode after="always" />
+				</ExtraCommands>
+				<MakeCommands>
+					<Build command="$make -f $makefile $target" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="wxvba">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<MakeCommands>
+					<Build command="$make -f $makefile $target" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="debugwxvba">
+				<Option type="4" />
+				<Option compiler="gcc" />
+				<ExtraCommands>
+					<Add before='echo &quot;\\033[1;31;46mif you have run the vba target before this make sure to clean first!\\033[0m&quot;' />
+					<Add after='echo &quot;\\033[1;31;46mRemember once you switch to the vba or wxvba target to clean first\\033[0m&quot;' />
+					<Mode after="always" />
+				</ExtraCommands>
+				<MakeCommands>
+					<Build command="$make -f $makefile $target" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $target &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="Makefile">
+			<Option target="vba" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+			<Option target="vba" />
+		</Unit>
+		<Unit filename="myLib.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="myLib.h">
+			<Option compile="1" />
+			<Option link="1" />
+		</Unit>
+		<Unit filename="snake_title.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="snake_title.h" />
+		<Unit filename="text.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="text.h">
+			<Option compile="1" />
+			<Option link="1" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
