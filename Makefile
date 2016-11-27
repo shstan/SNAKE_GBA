@@ -1,7 +1,6 @@
 ################################################################################
 # These are variables for the GBA toolchain build
 # You can add others if you wish to
-# ***** YOUR NAME HERE *****
 ################################################################################
 
 # The name of your desired GBA game
